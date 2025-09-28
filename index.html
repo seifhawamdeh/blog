@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>My Personal Blog</title>
+    <meta
+      name="description"
+      content="Thoughts on building software, staying curious, and living a creative life."
+    />
+    <link rel="stylesheet" href="assets/styles.css" />
+    <script defer src="js/config.js"></script>
+    <script defer src="js/posts.js"></script>
+    <script defer src="js/main.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>Hello, I'm Jamie.</h1>
+      <p>
+        I'm a curious engineer who writes about side projects, career lessons, and
+        the tools that keep me inspired.
+      </p>
+      <nav aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="signup.html">Sign Up</a>
+        <a href="login.html">Login</a>
+        <a href="admin.html">Admin</a>
+      </nav>
+    </header>
+
+    <main>
+      <section aria-labelledby="latest-posts">
+        <h2 id="latest-posts">Latest Posts</h2>
+        <ul class="article-list" id="post-list"></ul>
+      </section>
+    </main>
+
+    <footer>
+      <p>© <span id="current-year"></span> Jamie Carter. Built with care.</p>
+      <p>
+        <a href="mailto:hello@example.com">hello@example.com</a> ·
+        <a href="https://github.com/example">GitHub</a> ·
+        <a href="https://www.linkedin.com/in/example/">LinkedIn</a>
+      </p>
+    </footer>
+  </body>
+</html>

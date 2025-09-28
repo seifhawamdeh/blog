@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sign Up — Jamie Carter</title>
+    <link rel="stylesheet" href="assets/styles.css" />
+    <script defer src="js/main.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>Create your account</h1>
+      <p>Join the community to publish posts and participate in discussions.</p>
+      <nav aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="signup.html" aria-current="page">Sign Up</a>
+        <a href="login.html">Login</a>
+        <a href="admin.html">Admin</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="content-card" aria-labelledby="signup-heading">
+        <h2 id="signup-heading">Register as a new user</h2>
+        <form>
+          <div class="form-field">
+            <label for="signup-username">Username</label>
+            <input
+              id="signup-username"
+              name="username"
+              type="text"
+              autocomplete="username"
+              required
+              minlength="3"
+              placeholder="jamie_carter"
+            />
+          </div>
+          <div class="form-field">
+            <label for="signup-email">Email address</label>
+            <input
+              id="signup-email"
+              name="email"
+              type="email"
+              autocomplete="email"
+              required
+              placeholder="you@example.com"
+            />
+          </div>
+          <div class="form-field">
+            <label for="signup-phone">Phone number</label>
+            <input
+              id="signup-phone"
+              name="phone"
+              type="tel"
+              autocomplete="tel"
+              required
+              pattern="[-+() 0-9]{7,}"
+              placeholder="+1 (555) 123-4567"
+            />
+            <p class="hint">Include your country code and at least 7 digits.</p>
+          </div>
+          <div class="form-field">
+            <label for="signup-password">Password</label>
+            <input
+              id="signup-password"
+              name="password"
+              type="password"
+              autocomplete="new-password"
+              minlength="8"
+              required
+              pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^A-Za-z0-9]).{8,}"
+              aria-describedby="password-hint"
+              placeholder="Create a strong password"
+            />
+            <p class="hint" id="password-hint">
+              Use at least 8 characters with uppercase, lowercase, numbers, and a special symbol.
+            </p>
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="button">Create account</button>
+            <a class="button secondary" href="login.html">Already have an account? Log in</a>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>© <span id="current-year"></span> Jamie Carter. Built with care.</p>
+    </footer>
+  </body>
+</html>

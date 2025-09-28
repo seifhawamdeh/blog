@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact — Jamie Carter</title>
+    <link rel="stylesheet" href="assets/styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Get in Touch</h1>
+      <p>Let's chat about building software, creative projects, or coffee.</p>
+      <nav aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html" aria-current="page">Contact</a>
+        <a href="signup.html">Sign Up</a>
+        <a href="login.html">Login</a>
+        <a href="admin.html">Admin</a>
+      </nav>
+    </header>
+
+    <article>
+      <p>
+        The easiest way to reach me is by email at
+        <a href="mailto:hello@example.com">hello@example.com</a>. I read every
+        message and do my best to respond within a couple of days.
+      </p>
+      <p>Prefer social? I'm also around the web:</p>
+      <ul>
+        <li>
+          <a href="https://github.com/example">GitHub</a> for open source and
+          side projects
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/example/">LinkedIn</a> for
+          professional updates
+        </li>
+        <li>
+          <a href="https://mastodon.social/@example">Mastodon</a> for quick
+          thoughts
+        </li>
+      </ul>
+      <p>
+        If you're looking to collaborate on a project or invite me to speak, it
+        helps to include a short overview, timeline, and any relevant links.
+      </p>
+    </article>
+
+    <footer>
+      <p>© <span id="current-year"></span> Jamie Carter. Built with care.</p>
+    </footer>
+    <script>
+      document.getElementById("current-year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
