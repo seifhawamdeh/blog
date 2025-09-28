@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Login — Jamie Carter</title>
+    <link rel="stylesheet" href="assets/styles.css" />
+    <script defer src="js/main.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>Welcome back</h1>
+      <p>Sign in to manage your posts and keep the blog up to date.</p>
+      <nav aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="signup.html">Sign Up</a>
+        <a href="login.html" aria-current="page">Login</a>
+        <a href="admin.html">Admin</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="content-card" aria-labelledby="login-heading">
+        <h2 id="login-heading">Log in to your account</h2>
+        <form>
+          <div class="form-field">
+            <label for="login-email">Email address</label>
+            <input
+              id="login-email"
+              name="email"
+              type="email"
+              autocomplete="email"
+              required
+              placeholder="you@example.com"
+            />
+          </div>
+          <div class="form-field">
+            <label for="login-password">Password</label>
+            <input
+              id="login-password"
+              name="password"
+              type="password"
+              autocomplete="current-password"
+              minlength="8"
+              required
+              placeholder="Enter your password"
+            />
+            <p class="hint">Passwords must include at least 8 characters.</p>
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="button">Log in</button>
+            <div class="stack">
+              <a href="forgot-password.html">Forgot your password?</a>
+              <a href="signup.html">Need an account? Sign up</a>
+            </div>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>© <span id="current-year"></span> Jamie Carter. Built with care.</p>
+    </footer>
+  </body>
+</html>

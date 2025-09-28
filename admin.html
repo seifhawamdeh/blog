@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Admin Portal — Jamie Carter</title>
+    <link rel="stylesheet" href="assets/styles.css" />
+    <script defer src="js/main.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>Admin portal</h1>
+      <p>Oversee user accounts, publish posts, and keep the blog organized.</p>
+      <nav aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="signup.html">Sign Up</a>
+        <a href="login.html">Login</a>
+        <a href="admin.html" aria-current="page">Admin</a>
+      </nav>
+    </header>
+
+    <main class="stack">
+      <section aria-labelledby="user-management">
+        <h2 class="section-title" id="user-management">User management</h2>
+        <div class="two-column">
+          <div class="content-card">
+            <h3>Create a new user</h3>
+            <p class="hint">
+              Collect a username, email address, phone number, and a complex password before provisioning access.
+            </p>
+            <form>
+              <div class="form-field">
+                <label for="admin-username">Username</label>
+                <input id="admin-username" name="username" type="text" required minlength="3" placeholder="jamie_carter" />
+              </div>
+              <div class="form-field">
+                <label for="admin-email">Email address</label>
+                <input id="admin-email" name="email" type="email" required placeholder="you@example.com" />
+              </div>
+              <div class="form-field">
+                <label for="admin-phone">Phone number</label>
+                <input id="admin-phone" name="phone" type="tel" required pattern="[-+() 0-9]{7,}" placeholder="+1 (555) 123-4567" />
+              </div>
+              <div class="form-field">
+                <label for="admin-password">Temporary password</label>
+                <input
+                  id="admin-password"
+                  name="password"
+                  type="password"
+                  minlength="8"
+                  required
+                  pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^A-Za-z0-9]).{8,}"
+                  placeholder="Create a secure password"
+                />
+                <p class="hint">Minimum 8 characters with mixed case, numbers, and a special symbol.</p>
+              </div>
+              <div class="form-field">
+                <label for="admin-role">Role</label>
+                <select id="admin-role" name="role">
+                  <option value="editor">Editor</option>
+                  <option value="author">Author</option>
+                  <option value="reviewer">Reviewer</option>
+                  <option value="admin">Administrator</option>
+                </select>
+              </div>
+              <div class="form-actions">
+                <button type="submit" class="button">Add user</button>
+                <button type="reset" class="button secondary">Clear form</button>
+              </div>
+            </form>
+          </div>
+          <table class="data-table">
+            <caption>Recent users</caption>
+            <thead>
+              <tr>
+                <th scope="col">Username</th>
+                <th scope="col">Email</th>
+                <th scope="col">Phone</th>
+                <th scope="col">Role</th>
+                <th scope="col">Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>jamie</td>
+                <td>jamie@example.com</td>
+                <td>+1 (555) 010-2048</td>
+                <td><span class="badge">Admin</span></td>
+                <td>Active</td>
+              </tr>
+              <tr>
+                <td>alex</td>
+                <td>alex@example.com</td>
+                <td>+44 20 7946 0958</td>
+                <td><span class="badge">Editor</span></td>
+                <td>Pending invite</td>
+              </tr>
+              <tr>
+                <td>casey</td>
+                <td>casey@example.com</td>
+                <td>+61 3 7010 1234</td>
+                <td><span class="badge">Author</span></td>
+                <td>Active</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section aria-labelledby="post-management">
+        <h2 class="section-title" id="post-management">Post management</h2>
+        <div class="two-column">
+          <div class="content-card">
+            <h3>Publish a new post</h3>
+            <form>
+              <div class="form-field">
+                <label for="post-title">Post title</label>
+                <input id="post-title" name="title" type="text" required placeholder="Announcing our next big idea" />
+              </div>
+              <div class="form-field">
+                <label for="post-slug">Slug</label>
+                <input id="post-slug" name="slug" type="text" required placeholder="next-big-idea" />
+                <p class="hint">Use lowercase letters, numbers, and hyphens only.</p>
+              </div>
+              <div class="form-field">
+                <label for="post-status">Status</label>
+                <select id="post-status" name="status">
+                  <option value="draft">Draft</option>
+                  <option value="review">Ready for review</option>
+                  <option value="scheduled">Scheduled</option>
+                  <option value="published">Publish now</option>
+                </select>
+              </div>
+              <div class="form-field">
+                <label for="post-date">Publish date</label>
+                <input id="post-date" name="publish-date" type="date" />
+              </div>
+              <div class="form-field">
+                <label for="post-summary">Summary</label>
+                <textarea id="post-summary" name="summary" rows="4" placeholder="Write a short teaser for the homepage."></textarea>
+              </div>
+              <div class="form-actions">
+                <button type="submit" class="button">Save post</button>
+                <button type="reset" class="button secondary">Discard changes</button>
+              </div>
+            </form>
+          </div>
+          <table class="data-table">
+            <caption>Editorial pipeline</caption>
+            <thead>
+              <tr>
+                <th scope="col">Title</th>
+                <th scope="col">Status</th>
+                <th scope="col">Owner</th>
+                <th scope="col">Updated</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Designing opinionated APIs</td>
+                <td><span class="badge">Draft</span></td>
+                <td>alex</td>
+                <td>Apr 18, 2024</td>
+              </tr>
+              <tr>
+                <td>The remote work toolkit</td>
+                <td><span class="badge">Review</span></td>
+                <td>jamie</td>
+                <td>Apr 16, 2024</td>
+              </tr>
+              <tr>
+                <td>Observability on a budget</td>
+                <td><span class="badge">Scheduled</span></td>
+                <td>casey</td>
+                <td>Apr 12, 2024</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>© <span id="current-year"></span> Jamie Carter. Built with care.</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Building a Delightfully Simple Blog — Jamie Carter</title>
+    <link rel="stylesheet" href="../assets/styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Building a Delightfully Simple Blog</h1>
+      <p>A quick walkthrough of the process behind this site.</p>
+      <nav aria-label="Main navigation">
+        <a href="../index.html">Home</a>
+        <a href="../about.html">About</a>
+        <a href="../contact.html">Contact</a>
+        <a href="../signup.html">Sign Up</a>
+        <a href="../login.html">Login</a>
+        <a href="../admin.html">Admin</a>
+      </nav>
+    </header>
+
+    <article>
+      <time datetime="2024-03-18">March 18, 2024</time>
+      <p>
+        When I decided to give my personal site a refresh, I wanted to avoid the
+        trap of spending weeks fiddling with frameworks and build pipelines. I
+        needed something that felt lightweight, fast to maintain, and pleasant
+        for readers. That meant embracing good old-fashioned static HTML, a dash
+        of CSS, and a sprinkle of progressive enhancement.
+      </p>
+      <p>
+        The result is what you're reading now—a handcrafted blog that renders
+        almost instantly and is easy to publish to any static host. Here are a
+        few guiding principles I followed:
+      </p>
+      <ul>
+        <li>Optimize for writing, not configuration.</li>
+        <li>Use design tokens to keep styling consistent.</li>
+        <li>Ship accessible, semantic markup by default.</li>
+      </ul>
+      <h2>Content structure</h2>
+      <p>
+        Posts live in individual HTML files so they can be authored in any text
+        editor. A tiny JavaScript file powers the homepage list and formats
+        dates, but everything still works with scripting disabled.
+      </p>
+      <blockquote>
+        Simple tools are boring in the best way possible—they stay out of the
+        way so you can focus on the work that matters.
+      </blockquote>
+      <p>
+        Going forward I plan to add RSS and a projects page, but this version is
+        intentionally minimal. Shipping now means I can iterate with real
+        feedback instead of polishing in private.
+      </p>
+      <p>Thanks for stopping by. If you build something similar, let me know!</p>
+    </article>
+
+    <footer>
+      <p>© <span id="current-year"></span> Jamie Carter. Built with care.</p>
+    </footer>
+    <script>
+      document.getElementById("current-year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
